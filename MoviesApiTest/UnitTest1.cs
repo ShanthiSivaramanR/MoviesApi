@@ -1,13 +1,15 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace MoviesApiTest
 {
     [TestClass]
-    public class UnitTest1
+    public class MoviesDbContextTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void LoadDataFromCsvTest()
         {
-        }
+            var moviesDbContext = new Moviesapi.Data.MoviesDbContext("data/metadatatest.csv", "data/statstest.csv");
+            moviesDbContext.Movies.Count.Should().BeGreaterThan(0);
+        } 
     }
 }
