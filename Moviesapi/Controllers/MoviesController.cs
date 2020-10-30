@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mime;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moviesapi.CreateMovie;
+using Moviesapi.GetMovie;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Moviesapi.Controllers
 {
-    [Route("[controller]")]
+    [Route("movies")]
     [ApiController]
     public class MoviesController : ControllerBase
     {
@@ -19,27 +25,30 @@ namespace Moviesapi.Controllers
         public MoviesController(IMediator mediator)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
-        } 
+        }
 
         // GET api/<MoviesController>/5
         [HttpGet("{id}")]
-        public string Get(int movieId)
+        public async Task<ActionResult<GetMovieResponse>> Get(int movieId)
         {
-            return "value";
+            var result = await _mediator.Send(new GetMovieRequest { MovieId = movieId } );
+            return result;
         }
 
         // POST api/<MoviesController>
-        [HttpPost]
-        public async Task Post([FromBody]  CreateMovieRequest request)
+        [HttpPost] 
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<CreateMovieResponse>> PostAsync([FromBody]CreateMovieRequest request)
         {
             try
             {
-                var result = await _mediator.Send(request);
+                return await _mediator.Send(request);
             }
-            catch
+            catch (Exception ex)
             {
-
+                return BadRequest(ex.Message);
             }
-        } 
+        }
     }
 }
