@@ -5956,11 +5956,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shan1\\source\\repos\\Moviesapi\\MoviesApiTest\\MoviesApiTest.csproj",
+      "projectUniqueName": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\MoviesApiTest\\MoviesApiTest.csproj",
       "projectName": "MoviesApiTest",
-      "projectPath": "C:\\Users\\shan1\\source\\repos\\Moviesapi\\MoviesApiTest\\MoviesApiTest.csproj",
+      "projectPath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\MoviesApiTest\\MoviesApiTest.csproj",
       "packagesPath": "C:\\Users\\shan1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shan1\\source\\repos\\Moviesapi\\MoviesApiTest\\obj\\",
+      "outputPath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\MoviesApiTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shan1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5976,8 +5976,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\shan1\\source\\repos\\Moviesapi\\Moviesapi\\Moviesapi.csproj": {
-              "projectPath": "C:\\Users\\shan1\\source\\repos\\Moviesapi\\Moviesapi\\Moviesapi.csproj"
+            "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj": {
+              "projectPath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj"
             }
           }
         }

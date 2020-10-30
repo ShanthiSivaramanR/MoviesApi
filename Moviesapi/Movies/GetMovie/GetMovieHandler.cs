@@ -19,7 +19,11 @@ namespace Moviesapi.GetMovie
         public Task<GetMovieResponse> Handle(GetMovieRequest request, CancellationToken cancellationToken)
         {
             var moviesDistinct = _moviesDbContext.Movies
-                    .Where(c => c.MovieId == request.MovieId)
+                    .Where(c => c.MovieId == request.MovieId 
+                        && !string.IsNullOrEmpty(c.Duration) 
+                        && !string.IsNullOrEmpty(c.Language) 
+                        && !string.IsNullOrEmpty(c.Title)
+                        && c.ReleaseYear > 1800)
                     .GroupBy(c => c.Language)
                     .Select(g => g.OrderByDescending(c => c.Id).First())
                     .Select(movie => new MovieModel
@@ -29,7 +33,9 @@ namespace Moviesapi.GetMovie
                         MovieId = movie.MovieId,
                         ReleaseYear = movie.ReleaseYear,
                         Title = movie.Title
-                    }).ToList();
+                    })
+                    .OrderBy(o => o.Language)
+                    .ToList();            
             return Task.FromResult(new GetMovieResponse { Movies = moviesDistinct });
         }
     }

@@ -40,8 +40,8 @@ namespace Moviesapi.Data
                         Id = int.Parse(fields[0]),
                         MovieId = int.Parse(fields[1]),
                         Title = fields[2].ToString(),
-                        Duration = fields[3].ToString(),
-                        Language = fields[4].ToString(),
+                        Language = fields[3].ToString(),
+                        Duration = fields[4].ToString(),
                         ReleaseYear = int.Parse(fields[5])
                     });
                 }

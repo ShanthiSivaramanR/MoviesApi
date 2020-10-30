@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JOmFWHevw8E5I9uzs5nkvHc31xkUXghB/jr+kT0+WSy0XHbcrvfhtFlkDvy2gjLLQUxb5xm13FifcCBRgbnKFw==",
+  "dgSpecHash": "d4AWFvr06fJ1ReB/ADlSVjGJyi2V+pgq37qOESX4GBR0ycWlLcEC5CSEWNmAN3TrQMrCOO72/9b7oEEwNlom3w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shan1\\source\\repos\\Moviesapi\\Moviesapi\\Moviesapi.csproj",
+  "projectFilePath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shan1\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\shan1\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",

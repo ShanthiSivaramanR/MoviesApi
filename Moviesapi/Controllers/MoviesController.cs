@@ -28,11 +28,14 @@ namespace Moviesapi.Controllers
         }
 
         // GET api/<MoviesController>/5
-        [HttpGet("{id}")]
+        [HttpGet("{movieId}")]
         public async Task<ActionResult<GetMovieResponse>> Get(int movieId)
         {
-            var result = await _mediator.Send(new GetMovieRequest { MovieId = movieId } );
-            return result;
+            var response = await _mediator.Send(new GetMovieRequest { MovieId = movieId } );
+            if(response.IsSuccess)                
+                return response;
+            else
+                return NotFound();
         }
 
         // POST api/<MoviesController>
