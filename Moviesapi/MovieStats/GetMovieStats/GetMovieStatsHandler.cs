@@ -1,11 +1,13 @@
 ﻿using MediatR;
 using Moviesapi.Data;
+using Moviesapi.GetMovie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Tasks;
+
 
 namespace Moviesapi.MovieStats.GetMovieStats
 {
@@ -39,11 +41,12 @@ namespace Moviesapi.MovieStats.GetMovieStats
                     ReleaseYear = grp.Movie.ReleaseYear,
                     Title = grp.Movie.Title,
                     Watches = grp.optStat.Count,
-                    AverageWatchDurationS = grp.optStat.Average
-                }).Distinct()
+                    AverageWatchDuration = grp.optStat.Average
+                })                
                 .OrderBy(x=>x.Watches).ThenByDescending(x=>x.ReleaseYear)
+                .Distinct(new DistinctMovieModelComparer())
                 .ToList();
-            return Task.FromResult(new GetMovieStatsResponse { MovieStats = movieStats });
+            return Task.FromResult(new GetMovieStatsResponse { MovieStats = movieStats});
         }
     }
 }

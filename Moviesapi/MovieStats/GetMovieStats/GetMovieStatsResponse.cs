@@ -17,8 +17,26 @@ namespace Moviesapi.MovieStats.GetMovieStats
     {
         public int MovieId { get; set; }
         public string Title { get; set; }
-        public float AverageWatchDurationS { get; set; }
+        public float AverageWatchDuration { get; set; }
         public int Watches { get; set; }
         public int ReleaseYear { get; set; }
+    }
+    public class DistinctMovieModelComparer : IEqualityComparer<MovieStatResopnseModel>
+    {
+        public bool Equals(MovieStatResopnseModel x, MovieStatResopnseModel y)
+        {
+            return x.MovieId == y.MovieId &&
+                x.AverageWatchDuration == y.AverageWatchDuration &&
+                x.Watches == y.Watches&&
+                x.ReleaseYear == y.ReleaseYear;
+        }
+
+        public int GetHashCode(MovieStatResopnseModel obj)
+        {
+            return obj.MovieId.GetHashCode() ^ 
+                obj.AverageWatchDuration.GetHashCode() ^
+                obj.Watches.GetHashCode() ^
+                obj.ReleaseYear.GetHashCode();
+        }
     }
 }
