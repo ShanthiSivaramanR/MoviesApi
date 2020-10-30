@@ -8,6 +8,6 @@ namespace Moviesapi.Data
     public class MovieStat
     {
         public int MovieId { get; set; }
-        public ulong AverageWatchDurationS { get; set; }
+        public ulong WatchDurationS { get; set; }
     }
 }

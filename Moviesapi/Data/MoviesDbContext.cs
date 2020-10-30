@@ -67,7 +67,7 @@ namespace Moviesapi.Data
                     MoviesStats.Add(new MovieStat
                     {
                         MovieId = int.Parse(fields[0]),
-                        AverageWatchDurationS = ulong.Parse(fields[1])
+                        WatchDurationS = ulong.Parse(fields[1])
                     });
                 }
             }
