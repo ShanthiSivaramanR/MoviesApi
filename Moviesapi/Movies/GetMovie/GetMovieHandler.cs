@@ -18,9 +18,12 @@ namespace Moviesapi.GetMovie
 		}
 		public Task<GetMovieResponse> Handle(GetMovieRequest request, CancellationToken cancellationToken)
 		{
-			var defaultLanguageTitle = _moviesDbContext.Movies
+			var defaultLanguage = _moviesDbContext.Movies
 								.FirstOrDefault(x => x.MovieId == request.MovieId
-									&& x.Language.Equals(ApiConstants.DefaultLanguageCode, StringComparison.InvariantCultureIgnoreCase)).Title;
+									&& !string.IsNullOrEmpty(x.Language) 
+									&& x.Language.Equals(ApiConstants.DefaultLanguageCode, StringComparison.InvariantCultureIgnoreCase));
+			var defaultLanguageTitle = defaultLanguage != null ? defaultLanguage.Title : string.Empty ;
+
 			var moviesDistinct = _moviesDbContext.Movies
 					.Where(c => c.MovieId == request.MovieId
 						&& !string.IsNullOrEmpty(c.Duration)

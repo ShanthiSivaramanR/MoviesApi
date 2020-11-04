@@ -30,7 +30,7 @@ namespace Moviesapi.Controllers
 
         // POST api/<MoviesController>
         [HttpPost] 
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<CreateMovieResponse>> PostAsync([FromBody]CreateMovieRequest request)
         {

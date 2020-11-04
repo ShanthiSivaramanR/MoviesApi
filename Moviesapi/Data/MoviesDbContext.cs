@@ -55,7 +55,7 @@ namespace Moviesapi.Data
 						});
 					}
 				}
-				_cache.Set<List<Movie>>(ApiConstants.MoviesCacheKey, Movies);
+				_cache.Set<List<Movie>>(ApiConstants.MoviesCacheKey, Movies, _cacheExpirationOptions);
 			} 
 		}
 		private void LoadCsvStats(string filePath)
@@ -87,7 +87,7 @@ namespace Moviesapi.Data
 							WatchDurationS = ulong.Parse(fields[1])
 						});
 					}
-					_cache.Set<List<MovieStat>>(ApiConstants.MovieStatsCacheKey, MoviesStats);
+					_cache.Set<List<MovieStat>>(ApiConstants.MovieStatsCacheKey, MoviesStats, _cacheExpirationOptions);
 				}
 			}
 		}
