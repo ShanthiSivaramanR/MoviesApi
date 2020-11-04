@@ -16,7 +16,7 @@ using Moviesapi.GetMovie;
 
 namespace Moviesapi.Controllers
 {
-    [Route("movies")]
+    [Route("metadata")]
     [ApiController]
     public class MoviesController : ControllerBase
     {
@@ -32,7 +32,7 @@ namespace Moviesapi.Controllers
         public async Task<ActionResult<GetMovieResponse>> Get(int movieId)
         {
             var response = await _mediator.Send(new GetMovieRequest { MovieId = movieId } );
-            if(response.IsSuccess)                
+            if(response.Movies !=null && response.Movies.Count<0)                
                 return response;
             else
                 return NotFound();

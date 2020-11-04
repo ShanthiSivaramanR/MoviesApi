@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Moviesapi.Data;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,8 +27,8 @@ namespace Moviesapi.CreateMovie
                 ReleaseYear = request.ReleaseYear,
                 Title = request.Title
             });
-            var result = _moviesDbContext.SaveChanges();
-            return new CreateMovieResponse { Message = result.ToString() };
+            _moviesDbContext.SaveChanges();
+            return new CreateMovieResponse();
         }
     }
 }

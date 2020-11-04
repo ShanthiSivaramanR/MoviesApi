@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "d4AWFvr06fJ1ReB/ADlSVjGJyi2V+pgq37qOESX4GBR0ycWlLcEC5CSEWNmAN3TrQMrCOO72/9b7oEEwNlom3w==",
+  "dgSpecHash": "E7pEp81tAzLqftVlNG1ZC0t7TkuOvMJtP9X7eGS6ES0iqiTMvxNmq5N7H3x+Y9LVuf+fGw+N+6jW/8qmZCb8kQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shan1\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\shan1\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
-    "C:\\Users\\shan1\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512"
+    "C:\\Users\\shan1\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\shan1\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\shan1\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\shan1\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\shan1\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
   ],
   "logs": []
 }

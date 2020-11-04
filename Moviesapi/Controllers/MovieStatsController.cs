@@ -25,7 +25,7 @@ namespace Moviesapi.Controllers
         public async Task<ActionResult<GetMovieStatsResponse>> Get()
         {
             var response = await _mediator.Send(new GetMovieStatsRequest());
-            if (response.IsSuccess)
+            if (response.MovieStats!=null && response.MovieStats.Count>0)
                 return response;
             else
                 return NotFound();

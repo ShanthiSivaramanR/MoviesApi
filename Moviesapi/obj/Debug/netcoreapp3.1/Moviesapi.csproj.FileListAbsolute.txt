@@ -21,5 +21,10 @@ C:\Users\shan1\source\repos\Moviesapi\Moviesapi\bin\Debug\netcoreapp3.1\Data\met
 C:\Users\shan1\source\repos\Moviesapi\Moviesapi\bin\Debug\netcoreapp3.1\Data\stats.csv
 C:\Users\shan1\source\repos\Moviesapi\Moviesapi\bin\Debug\netcoreapp3.1\MediatR.dll
 C:\Users\shan1\source\repos\Moviesapi\Moviesapi\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\shan1\source\repos\Moviesapi\Moviesapi\obj\Debug\netcoreapp3.1\Moviesapi.csproj.CoreCompileInputs.cache
-C:\Users\shan1\source\repos\Moviesapi\Moviesapi\obj\Debug\netcoreapp3.1\Moviesapi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\shan1\Source\Repos\MoviesApi\Moviesapi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\shan1\Source\Repos\MoviesApi\Moviesapi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\shan1\Source\Repos\MoviesApi\Moviesapi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\shan1\Source\Repos\MoviesApi\Moviesapi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\shan1\Source\Repos\MoviesApi\Moviesapi\obj\Debug\netcoreapp3.1\Moviesapi.csproj.CoreCompileInputs.cache
+C:\Users\shan1\Source\Repos\MoviesApi\Moviesapi\obj\Debug\netcoreapp3.1\Moviesapi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\shan1\Source\Repos\MoviesApi\Moviesapi\obj\Debug\netcoreapp3.1\Moviesapi.MvcApplicationPartsAssemblyInfo.cache

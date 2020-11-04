@@ -1,13 +1,12 @@
-﻿using MediatR;
-
-namespace Moviesapi.CreateMovie
+﻿namespace Moviesapi.GetMovie
 {
-    public class CreateMovieRequest : IRequest<CreateMovieResponse>
+    public class MovieModel
     {
         public int MovieId { get; set; }
         public string Title { get; set; }
         public string Language { get; set; }
         public string Duration { get; set; }
         public int ReleaseYear { get; set; }
+        
     }
 }
