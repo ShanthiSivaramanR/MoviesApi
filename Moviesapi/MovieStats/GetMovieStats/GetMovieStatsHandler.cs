@@ -27,16 +27,16 @@ namespace Moviesapi.MovieStats.GetMovieStats
 				Average = (int)TimeSpan.FromMilliseconds(g.Average(i => (float)i.WatchDurationS)).TotalSeconds
 			});
 
-			var movieStats = _moviesDbContext.Movies
-				.Join(optStat,
-					mov => mov.MovieId,
+			var movieStats = optStat
+				.GroupJoin(_moviesDbContext.Movies,
 					stat => stat.MovieId,
-					(mov, stat) => new { Movie = mov, optStat = stat })
+					mov => mov.MovieId,
+					(stat, mov) => new { Movie = mov, optStat = stat })
 				.Select(grp => new MovieStatResopnseModel
 				{
-					MovieId = grp.Movie.MovieId,
-					ReleaseYear = grp.Movie.ReleaseYear,
-					Title = grp.Movie.Title,
+					MovieId = grp.optStat.MovieId,
+					ReleaseYear = grp.Movie.FirstOrDefault() == null ? 0 : grp.Movie.FirstOrDefault().ReleaseYear,
+					Title = grp.Movie.FirstOrDefault() == null ? "no metadata" : grp.Movie.FirstOrDefault().Title,
 					Watches = grp.optStat.Count,
 					AverageWatchDurationS = grp.optStat.Average
 				})
