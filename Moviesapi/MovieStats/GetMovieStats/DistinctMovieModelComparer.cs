@@ -6,18 +6,12 @@ namespace Moviesapi.MovieStats.GetMovieStats
     {
         public bool Equals(MovieStatResopnseModel x, MovieStatResopnseModel y)
         {
-            return x.MovieId == y.MovieId &&
-                x.AverageWatchDurationS == y.AverageWatchDurationS &&
-                x.Watches == y.Watches&&
-                x.ReleaseYear == y.ReleaseYear;
+            return x.MovieId == y.MovieId;
         }
 
         public int GetHashCode(MovieStatResopnseModel obj)
         {
-            return obj.MovieId.GetHashCode() ^ 
-                obj.AverageWatchDurationS.GetHashCode() ^
-                obj.Watches.GetHashCode() ^
-                obj.ReleaseYear.GetHashCode();
+            return obj.MovieId.GetHashCode();
         }
     }
 }
