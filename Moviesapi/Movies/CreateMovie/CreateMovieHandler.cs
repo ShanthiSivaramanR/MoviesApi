@@ -15,7 +15,7 @@ namespace Moviesapi.CreateMovie
         {
             _moviesDbContext = moviesDbContext ?? throw new ArgumentNullException(nameof(moviesDbContext));
         }
-        public async Task<CreateMovieResponse> Handle(CreateMovieRequest request, CancellationToken cancellationToken)
+        public Task<CreateMovieResponse> Handle(CreateMovieRequest request, CancellationToken cancellationToken)
         {
             var id = _moviesDbContext.Movies.Count() + 1;
             _moviesDbContext.Movies.Add(new Movie
@@ -28,7 +28,7 @@ namespace Moviesapi.CreateMovie
                 Title = request.Title
             });
             _moviesDbContext.SaveChanges();
-            return new CreateMovieResponse();
+            return Task.FromResult(new CreateMovieResponse());
         }
     }
 }

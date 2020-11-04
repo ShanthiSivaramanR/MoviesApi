@@ -23,9 +23,8 @@ namespace Moviesapi.Data
 		}
 		private void LoadCsvMovies(string filePath)
 		{
-			List<Movie> cachedMovies = new List<Movie>();
-			var movieCacheKey = "movies";
-			if (_cache.TryGetValue<List<Movie>>(movieCacheKey, out cachedMovies))
+			List<Movie> cachedMovies = new List<Movie>(); 
+			if (_cache.TryGetValue<List<Movie>>(ApiConstants.MoviesCacheKey, out cachedMovies))
 			{
 				Movies = cachedMovies;
 			}
@@ -56,14 +55,13 @@ namespace Moviesapi.Data
 						});
 					}
 				}
-				_cache.Set<List<Movie>>(movieCacheKey, Movies);
+				_cache.Set<List<Movie>>(ApiConstants.MoviesCacheKey, Movies);
 			} 
 		}
 		private void LoadCsvStats(string filePath)
 		{
-			List<MovieStat> cachedMoviestats = new List<MovieStat>();
-			var movieStatsCacheKey = "moviestats";
-			if (_cache.TryGetValue<List<MovieStat>>(movieStatsCacheKey, out cachedMoviestats))
+			List<MovieStat> cachedMoviestats = new List<MovieStat>(); 
+			if (_cache.TryGetValue<List<MovieStat>>(ApiConstants.MovieStatsCacheKey, out cachedMoviestats))
 			{
 				MoviesStats = cachedMoviestats;
 			}
@@ -89,7 +87,7 @@ namespace Moviesapi.Data
 							WatchDurationS = ulong.Parse(fields[1])
 						});
 					}
-					_cache.Set<List<MovieStat>>(movieStatsCacheKey, MoviesStats);
+					_cache.Set<List<MovieStat>>(ApiConstants.MovieStatsCacheKey, MoviesStats);
 				}
 			}
 		}
