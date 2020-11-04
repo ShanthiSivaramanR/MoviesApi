@@ -24,6 +24,7 @@ namespace Moviesapi
             services.AddScoped<IMoviesDbContext, MoviesDbContext>();
             services.AddMediatR(typeof(Startup));
             services.AddControllers();
+            services.AddMemoryCache();
             services.AddSwaggerGen(c=>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Movie API", Version = "v1" });
