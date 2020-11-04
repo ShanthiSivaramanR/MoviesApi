@@ -6074,19 +6074,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shan1\\.nuget\\packages\\": {}
+    "C:\\Users\\shanthi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\MoviesApiTest\\MoviesApiTest.csproj",
+      "projectUniqueName": "C:\\Users\\shanthi\\Source\\Repos\\MoviesApi\\MoviesApiTest\\MoviesApiTest.csproj",
       "projectName": "MoviesApiTest",
-      "projectPath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\MoviesApiTest\\MoviesApiTest.csproj",
-      "packagesPath": "C:\\Users\\shan1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\MoviesApiTest\\obj\\",
+      "projectPath": "C:\\Users\\shanthi\\Source\\Repos\\MoviesApi\\MoviesApiTest\\MoviesApiTest.csproj",
+      "packagesPath": "C:\\Users\\shanthi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\shanthi\\Source\\Repos\\MoviesApi\\MoviesApiTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\shan1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shanthi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6099,8 +6099,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj": {
-              "projectPath": "C:\\Users\\shan1\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj"
+            "C:\\Users\\shanthi\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj": {
+              "projectPath": "C:\\Users\\shanthi\\Source\\Repos\\MoviesApi\\Moviesapi\\Moviesapi.csproj"
             }
           }
         }

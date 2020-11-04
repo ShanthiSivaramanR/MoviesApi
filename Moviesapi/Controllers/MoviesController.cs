@@ -27,16 +27,6 @@ namespace Moviesapi.Controllers
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
 
-        // GET api/<MoviesController>/5
-        [HttpGet("{movieId}")]
-        public async Task<ActionResult<GetMovieResponse>> Get(int movieId)
-        {
-            var response = await _mediator.Send(new GetMovieRequest { MovieId = movieId } );
-            if(response.Movies !=null && response.Movies.Count<0)                
-                return response;
-            else
-                return NotFound();
-        }
 
         // POST api/<MoviesController>
         [HttpPost] 
@@ -52,6 +42,17 @@ namespace Moviesapi.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        // GET api/<MoviesController>/5
+        [HttpGet("{movieId}")]
+        public async Task<ActionResult<GetMovieResponse>> Get(int movieId)
+        {
+            var response = await _mediator.Send(new GetMovieRequest { MovieId = movieId });
+            if (response.Movies != null && response.Movies.Count > 0)
+                return response;
+            else
+                return NotFound();
         }
     }
 }
